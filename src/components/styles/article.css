@@ -1,0 +1,87 @@
+.card {
+    width: 255px;
+    height: 395px;
+    margin-top: 3rem;
+    background-color: var(--white);
+}
+
+.card:nth-child(3),
+.card:nth-child(4),
+.card:nth-child(5) {
+    margin-left: 1.85rem;
+}
+
+.card_image {
+    border-radius: .3rem .3rem 0 0;
+}
+
+.card_img {
+    width: 100%;
+    height: 200px;
+    background-image: url(images/image-currency.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card:nth-child(3) .card_img {
+    background-image: url('images/image-restaurant.jpg');
+}
+
+.card:nth-child(4) .card_img {
+    background-image: url('images/image-plane.jpg');
+}
+
+.card:nth-child(5) .card_img {
+    background-image: url('images/image-confetti.jpg');
+}
+
+.card_info {
+    padding: 1.45rem 1.6rem 1.45rem 1.45rem;
+}
+
+.info_author {
+    font-size: 0.6rem;
+    font-weight: 200;
+    color: var(--grayish-blue);
+}
+
+.card_info_title{
+    margin: .5rem 0;
+    font-size: .98rem;
+    font-weight: 200;
+    line-height: 1.2rem;
+    transition: all .25s ease-in-out;
+}
+
+.card_info_title:hover {
+    cursor: pointer;
+    color: var(--lime-green);
+}
+
+.card_info_description {
+    font-size: .78rem;
+    font-weight: 200;
+    line-height: 1.15rem;
+    letter-spacing: .006rem;
+    color: var(--grayish-blue);
+}
+
+@media screen and (max-width: 1240px) {
+    .card {
+        width: 45%;
+    }
+    
+    .card:nth-child(3),
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        margin-left: 0;
+    }    
+}
+
+@media screen and (max-width: 880px) {
+    .card {
+        width: 90%;
+        max-width: 500px;
+    }
+}
