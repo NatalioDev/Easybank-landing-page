@@ -5,13 +5,32 @@ type Props = {
   author: string,
   title: string,
   description: string,
+  image: string,
 }
 
-export default function Article({author, title, description}:Props) {
+export default function Article({author, title, description, image}:Props) {
+
+  // const styles = {
+  //   background: `url(${image}) , var(--very-light-gray)`,
+  //   width: '100%',
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   backgroundRepeat: 'no-repeat',
+  //   backgroundPositionX: '43.4vw',
+  //   backgroundPositionY: '-260px',
+  //   }
+
+
   return (
     <div className="card">
         <div className="card_image">
-            <figure className="card_img">
+            <figure style={{
+              width: '100%',
+              height: '200px',
+              backgroundImage: `url(${image})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',}}>
 
             </figure>
         </div>
