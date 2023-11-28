@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import "./styles/hero.css"
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 
-import bgImage from '../../public/images/bg-intro-desktop.svg';
+// import bgImage from 'images/bg-intro-desktop.svg';
 
 
 export default function Hero() {
 
     const styles = {
-    background: `url(${bgImage}) , var(--very-light-gray)`,
+    background: `url(images/bg-intro-desktop.svg) , var(--very-light-gray)`,
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
