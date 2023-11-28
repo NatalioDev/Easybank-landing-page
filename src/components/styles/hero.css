@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: url(images/bg-intro-desktop.svg) , var(--very-light-gray);
+    background: url(https://nataliodev.github.io/Easybank-landing-page/assets/images/bg-intro-desktop.svg) , var(--very-light-gray);
     background-repeat: no-repeat;
     background-position-x: 43.4vw;
     background-position-y: -260px;
