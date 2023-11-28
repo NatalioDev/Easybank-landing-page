@@ -10,17 +10,6 @@ type Props = {
 
 export default function Article({author, title, description, image}:Props) {
 
-  // const styles = {
-  //   background: `url(${image}) , var(--very-light-gray)`,
-  //   width: '100%',
-  //   display: 'flex',
-  //   justifyContent: 'center',
-  //   backgroundRepeat: 'no-repeat',
-  //   backgroundPositionX: '43.4vw',
-  //   backgroundPositionY: '-260px',
-  //   }
-
-
   return (
     <div className="card">
         <div className="card_image">
@@ -31,7 +20,6 @@ export default function Article({author, title, description, image}:Props) {
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPosition: 'center',}}>
-
             </figure>
         </div>
         <div className="card_info">
