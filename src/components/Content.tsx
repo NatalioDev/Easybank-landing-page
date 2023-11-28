@@ -33,14 +33,14 @@ export default function Content() {
     },
   ]
   return (
-    <div className="wrapper">
+    <div className="content_wrapper">
         <section className="content">
-            <h2 className="title">Why choose Easybank?</h2>
-            <p className="description">
+            <h2 className="content_title">Why choose Easybank?</h2>
+            <p className="content_description">
             We leverage Open Banking to turn your bank account into your financial hub. Control
             your finances like never before.
             </p>
-            <div className="choose">
+            <div className="content_choose">
               {items.map(({ img, title, description}) => (
                 <Item
                   img={img}

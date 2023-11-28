@@ -1,5 +1,5 @@
-.header {
-    width: 100vw;
+/* .header {
+    width: 100%;
     max-width: 1440px;
     height: 80px;
     padding: 0 10.3rem;
@@ -9,7 +9,7 @@
     background-color: var(--white);
     z-index: 10;
     position: absolute;
-}
+} */
 
 .header_logo {
     margin-top: 10px;
@@ -41,17 +41,5 @@
 @media screen and (max-width: 880px) {
     .header_request_btn:nth-child(4){
         display: none;
-    }
-    .menu_icon {
-        margin-left: 75px;
-        margin-right: -75px;
-        width: 35px;
-        height: 25px;
-        cursor: pointer;
-        background-image: url(images/icon-hamburger.svg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: all .3s ease-in-out;
     }
 }

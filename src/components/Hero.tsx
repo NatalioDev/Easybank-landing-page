@@ -1,21 +1,30 @@
 import { useEffect } from "react";
 import "./styles/hero.css"
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-
+// Importa la librería Styled Components
+import styled from 'styled-components';
 // import bgImage from 'images/bg-intro-desktop.svg';
 
 
 export default function Hero() {
 
-    const styles = {
-    background: `url(images/bg-intro-desktop.svg) , var(--very-light-gray)`,
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundPositionX: '43.4vw',
-    backgroundPositionY: '-260px',
+    //Creo estos estilos aca para resolver el problema de rutas de github pages
+    const Container = styled.div `
+    background: url(images/bg-intro-desktop.svg) , var(--very-light-gray),
+    width: 100%,
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position-x: 43.4vw;
+    background-position-y: -260px;
+  
+    @media screen and (max-width: 768px) {
+      background: url(images/bg-intro-mobile.svg), var(--very-light-gray);
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: -2rem;
     }
+    `;
 
     const controls = useAnimation();
     const controlsTitle = useAnimation();
@@ -61,10 +70,7 @@ export default function Hero() {
     },[controls, controlsTitle, controlsDescription, controlsButton]);
 
   return (
-    <div 
-        className="hero_container"
-        style={styles}
-    >
+    <Container>
         <div className="hero_wrapper">
             <AnimatePresence>
                 <section className="hero_info">
@@ -101,5 +107,5 @@ export default function Hero() {
                 </motion.div>
             </AnimatePresence>
         </div>
-    </div>
+    </Container >
 )}
