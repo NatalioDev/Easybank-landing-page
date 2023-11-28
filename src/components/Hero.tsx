@@ -2,8 +2,20 @@ import { useEffect } from "react";
 import "./styles/hero.css"
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 
+import bgImage from '../../public/images/bg-intro-desktop.svg';
+
 
 export default function Hero() {
+
+    const styles = {
+    background: `url(${bgImage}) , var(--very-light-gray)`,
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundPositionX: '43.4vw',
+    backgroundPositionY: '-260px',
+    }
 
     const controls = useAnimation();
     const controlsTitle = useAnimation();
@@ -49,7 +61,10 @@ export default function Hero() {
     },[controls, controlsTitle, controlsDescription, controlsButton]);
 
   return (
-    <div className="hero_container">
+    <div 
+        className="hero_container"
+        style={styles}
+    >
         <div className="hero_wrapper">
             <AnimatePresence>
                 <section className="hero_info">
