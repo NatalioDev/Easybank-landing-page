@@ -6,12 +6,10 @@ import styled from 'styled-components';
 // import bgImage from 'images/bg-intro-desktop.svg';
 
 
-export default function Hero() {
-
-    //Creo estos estilos aca para resolver el problema de rutas de github pages
+//Creo estos estilos aca para resolver el problema de rutas de github pages
     const Container = styled.div `
     background: url(images/bg-intro-desktop.svg) , var(--very-light-gray),
-    width: 100%,
+    width: 100%;
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
@@ -26,6 +24,7 @@ export default function Hero() {
     }
     `;
 
+export default function Hero() {
     const controls = useAnimation();
     const controlsTitle = useAnimation();
     const controlsDescription = useAnimation();
