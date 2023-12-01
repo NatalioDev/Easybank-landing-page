@@ -7,7 +7,7 @@ export default function Header() {
 
   const MenuIcon = styled.span `
   @media screen and (max-width: 880px) {
-  margin-left: 75px;
+  margin-left: 55px;
   margin-right: -50px;
   width: 35px;
   height: 25px;
