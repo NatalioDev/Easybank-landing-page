@@ -1,24 +1,14 @@
 import Nav from "./Nav";
+import Sidebar from "./Sidebar";
 import "./styles/header.css"
+import { useState } from 'react'
+
 // Importa la librería Styled Components
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 export default function Header() {
 
-  const MenuIcon = styled.span `
-  @media screen and (max-width: 880px) {
-  margin-left: 55px;
-  margin-right: -50px;
-  width: 35px;
-  height: 25px;
-  cursor: pointer;
-  background-image: url(images/icon-hamburger.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all .3s ease-in-out;
-  }`;
-
+  const [Open, setOpen] = useState(false)
 
   return (
     <div>
@@ -26,8 +16,17 @@ export default function Header() {
           <figure className='header_logo'>
             <img src="images/logo.svg" alt="logo image" className="header_logo_img"/>
           </figure>
+          <Sidebar Open={Open} setOpen={setOpen} />
           <Nav />
-          <MenuIcon></MenuIcon>
+          <button
+            className="header_hamburg"
+            onClick={() => setOpen(true) }
+            aria-expanded={Open}
+            aria-controls="sidebar"
+            aria-label="Open Menu"
+        >
+          <img src="images/icon-hamburger.svg" alt="Hamburg" />
+        </button>
           <a href="#" className="header_request_btn">Request Invite</a>
         </header>
     </div>

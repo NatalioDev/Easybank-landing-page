@@ -36,6 +36,10 @@
     opacity: .6;
 }
 
+.header_hamburg {
+    display: none;
+}
+
 @media screen and (max-width: 1080px) {
     .header {
         padding: 0 2rem;
@@ -62,6 +66,29 @@
 
     .header_request_btn:nth-child(4){
         display: none;
+    }
+
+    .header_hamburg {
+        margin-top: 3px;
+        margin-left: 45px;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        background-color: transparent;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .3s ease-in-out;
+        border: none;
+        display: block;
+    }
+
+    .header_svg {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
 
