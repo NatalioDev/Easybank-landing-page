@@ -1,17 +1,24 @@
+// Importamos Hooks.
 import { useEffect } from "react";
+
+// Importamos estilos. 
 import "./styles/hero.css"
+
+// Importamos Framer-motion.
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-// import bgImage from 'images/bg-intro-desktop.svg';
 
 
 
 export default function Hero() {
+    // Creamos instancias de control para animaciones de diferentes elementos
     const controls = useAnimation();
     const controlsTitle = useAnimation();
     const controlsDescription = useAnimation();
     const controlsButton = useAnimation();
 
+    // Utilizamos el hook para iniciar las animaciones cuendo el componente se monta.
     useEffect(() => {
+        //Función asincrónica para iniciar la animación del componente principal.
         const startAnimation = async () => {
             await controls.start({ 
                 y: 90, 
@@ -20,6 +27,7 @@ export default function Hero() {
             });
         };
 
+        // Funciones asincrónicas para iniciar las animaciones de otros elemnetos.
         const startAnimateTitle = async () => {
             await controlsTitle.start({
                 y:0,
@@ -42,6 +50,7 @@ export default function Hero() {
             })
         };
 
+        // Llamamos a las funciones para iniciar las animaciones.
         startAnimation();
         startAnimateTitle();
         startAnimateDescription();
@@ -51,14 +60,18 @@ export default function Hero() {
 
   return (
         <section className="hero">
-            <div className="hero_wrapper">
+            <div className="hero_wrapper"> 
+                {/* AnimatePresence para gestionar la presencia de elementos animados */}
                 <AnimatePresence>
+                        {/* Elemento h1 animado */}
                         <motion.h1
                             initial={{y:-100}}
                             animate={controlsTitle}
                             className="hero_info_title"
                         >Next generation digital banking
                         </motion.h1>
+
+                        {/* Elemento p animado */}
                         <motion.p 
                             className="hero_info_description "
                             initial={{y:100}}
@@ -67,6 +80,8 @@ export default function Hero() {
                         Take your financial life online. Your Easybank account will be a one-stop-shop
                         for spending, saving, budgeting, investing, and much more.
                         </motion.p>
+
+                        {/* Elemento div para el botón animado */}
                         <motion.div 
                             className="hero_btn"
                             initial={{y:100, opacity: 0}}
@@ -74,6 +89,8 @@ export default function Hero() {
                         >
                             <a href="#" className="hero_request_btn">Request invite</a>
                         </motion.div>
+
+                            {/* Imagenes de fondo y principal animadas */}
                             <img src="images/bg-intro-desktop.svg" alt="" className="hero_bg" />
                             <motion.img 
                                 src="images/image-mockups.png" 

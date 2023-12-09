@@ -1,13 +1,12 @@
-// CSS
+// Importaos estilos
 import "./styles/articles.css";
 
-// Component
+// Importamos componentes.
 import Article from "./Article";
-
-
 
 export default function Articles() {
 
+  // Array de objetos que representan los artículos.
   const articles = [
     {
       id:1,
@@ -41,10 +40,17 @@ export default function Articles() {
 
   return (
     <div className="articles">
+
+        {/* Contenedor principal de los artículos */}
         <section className="articles_wrapper">
+
+            {/* Título de la sección de artículos */}
             <h2 className="articles_title">Latest Articles</h2>
-            {articles.map(({author, title, description, image}) => (
+
+            {/* Mapeamos sobre el array de artículos para renderizar cada Artículo */}
+            {articles.map(({id, author, title, description, image}) => (
               <Article
+                key={id}
                 author={author}
                 title={title}
                 description={description}

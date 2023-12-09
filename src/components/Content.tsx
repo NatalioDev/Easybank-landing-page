@@ -1,7 +1,12 @@
+// Importamos componente.
 import Item from "./Item";
+
+// Importamos estilos
 import "./styles/content.css"
 
 export default function Content() {
+
+  // Definimos un array de objetos que representan los elementos a mostrar.
   const items = [
     {
       id:1,
@@ -34,15 +39,25 @@ export default function Content() {
   ]
   return (
     <div className="content_wrapper">
+        {/* Contenedor principal del contenido */}
         <section className="content">
+
+            {/* Titulo del contenido */}
             <h2 className="content_title">Why choose Easybank?</h2>
+
+            {/* Descripción del contenido */}
             <p className="content_description">
             We leverage Open Banking to turn your bank account into your financial hub. Control
             your finances like never before.
             </p>
+
+            {/* Contenedor para mostrar elementos individuales */}
             <div className="content_choose">
-              {items.map(({ img, title, description}) => (
+
+              {/* Mapeamos sobre el array de items para renderizar cada Item */}
+              {items.map(({id, img, title, description}) => (
                 <Item
+                  key={id}
                   img={img}
                   title={title}
                   description={description}
